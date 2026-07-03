@@ -1,0 +1,48 @@
+{
+  "rewrites": [
+    {
+      "source": "/images/liverpool.jpg",
+      "destination": "https://22e23531-ba9c-47bb-9832-bf35afeb1a23.lovableproject.com/__l5e/assets-v1/54e0b385-9545-4fcb-abf0-2a36386b2e8a/liverpool.jpg"
+    },
+    {
+      "source": "/images/maos-na-massa.jpg",
+      "destination": "https://22e23531-ba9c-47bb-9832-bf35afeb1a23.lovableproject.com/__l5e/assets-v1/e84ab5bb-8dc5-4a0e-b787-0dcdf2a1b25e/maos-na-massa.jpg"
+    },
+    {
+      "source": "/images/pet-mamae.jpg",
+      "destination": "https://22e23531-ba9c-47bb-9832-bf35afeb1a23.lovableproject.com/__l5e/assets-v1/be0504cc-40f8-44ed-bcb2-3b3edf92a7fb/pet-mamae.jpg"
+    },
+    {
+      "source": "/images/warren-socia-merito-2021.jpg",
+      "destination": "https://22e23531-ba9c-47bb-9832-bf35afeb1a23.lovableproject.com/__l5e/assets-v1/393debba-2119-4b0e-a68e-0c99b1a1f173/warren-socia-merito-2021.png"
+    },
+    {
+      "source": "/images/certificado-aegro-bootcamp.jpeg",
+      "destination": "https://22e23531-ba9c-47bb-9832-bf35afeb1a23.lovableproject.com/__l5e/assets-v1/91344856-7432-44c4-9d09-784d6e238897/certificado-aegro-bootcamp.jpeg"
+    },
+    {
+      "source": "/images/aeger-valor-1.png",
+      "destination": "https://22e23531-ba9c-47bb-9832-bf35afeb1a23.lovableproject.com/__l5e/assets-v1/d980be4d-a2de-4882-a59f-8e5c8944ee63/aeger-valor-1.png"
+    },
+    {
+      "source": "/images/aeger-valor-2.png",
+      "destination": "https://22e23531-ba9c-47bb-9832-bf35afeb1a23.lovableproject.com/__l5e/assets-v1/a03e54c3-d144-45e5-8128-d66cf15bcdc4/aeger-valor-2.png"
+    },
+    {
+      "source": "/images/aeger-valor-3.png",
+      "destination": "https://22e23531-ba9c-47bb-9832-bf35afeb1a23.lovableproject.com/__l5e/assets-v1/e26efb2a-bcd6-4d8c-a407-56367dd4c01d/aeger-valor-3.png"
+    },
+    {
+      "source": "/images/palestra-seagro.jpeg",
+      "destination": "https://22e23531-ba9c-47bb-9832-bf35afeb1a23.lovableproject.com/__l5e/assets-v1/68ec2663-b0f5-41c6-9ac8-be7f9d3bf3ee/palestra-seagro.jpeg"
+    },
+    {
+      "source": "/images/palestra-reforma-rs.jpeg",
+      "destination": "https://22e23531-ba9c-47bb-9832-bf35afeb1a23.lovableproject.com/__l5e/assets-v1/7bdcdd96-9b4d-456c-9dd6-e07443571fa7/palestra-reforma-rs.jpeg"
+    },
+    {
+      "source": "/images/live-ir-warren-2020.png",
+      "destination": "https://22e23531-ba9c-47bb-9832-bf35afeb1a23.lovableproject.com/__l5e/assets-v1/defa783f-ff65-4445-940d-e12a0ddaa621/live-ir-warren-2020.png"
+    }
+  ]
+}
