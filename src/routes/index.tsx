@@ -16,8 +16,6 @@ import {
   Globe,
 } from "lucide-react";
 
-
-
 import certificadoAegro from "../assets/certificado-aegro-bootcamp.jpeg.asset.json";
 import palestraSeagro from "../assets/palestra-seagro.jpeg.asset.json";
 import palestraReformaRS from "../assets/palestra-reforma-rs.jpeg.asset.json";
@@ -29,7 +27,6 @@ import aegerValor3 from "../assets/aeger-valor-3.png.asset.json";
 import maosNaMassa from "../assets/maos-na-massa.jpg.asset.json";
 import petMamae from "../assets/pet-mamae.jpg.asset.json";
 import liverpool from "../assets/liverpool.jpg.asset.json";
-
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
@@ -155,11 +152,11 @@ const PROJETOS: Projeto[] = [
     cta: "Abrir simulador",
   },
   {
-    tag: "ERP · Em breve",
+    tag: "ERP · Lovable",
     title: "ERP para Equoterapia",
-    body: "Sistema em construção no Lovable dedicado a centros de equoterapia — prontuário, agenda e faturamento. Lançamento amanhã.",
-    href: null,
-    cta: "Aguarde",
+    body: "Sistema no Lovable dedicado a centros de equoterapia — prontuário, agenda e faturamento.",
+    href: "https://equo-flow-manager.lovable.app",
+    cta: "Abrir sistema",
   },
 ];
 
@@ -199,7 +196,6 @@ type PalestraItem =
       href?: string;
       videoId?: string;
     };
-
 
 const PALESTRAS: PalestraItem[] = [
   {
@@ -270,7 +266,6 @@ const PALESTRAS: PalestraItem[] = [
   },
 ];
 
-
 const DEMONSTRACOES = [
   {
     label: "Demonstração financeira — Fundo I",
@@ -326,6 +321,27 @@ function Portfolio() {
 
 function Header() {
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
+
+  useEffect(() => {
+    const sections = NAV.map((n) => n.href.replace("#", ""));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection("#" + entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+    );
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <header className="sticky top-0 z-50 border-b border-ink/10 bg-cream/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -340,7 +356,11 @@ function Header() {
             <a
               key={n.href}
               href={n.href}
-              className="text-sm text-ink/70 transition hover:text-amber"
+              className={`text-sm transition ${
+                activeSection === n.href
+                  ? "font-medium text-amber"
+                  : "text-ink/70 hover:text-amber"
+              }`}
             >
               {n.label}
             </a>
@@ -354,7 +374,7 @@ function Header() {
         </a>
         <button
           type="button"
-          aria-label="Abrir menu"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
           onClick={() => setOpen((v) => !v)}
           className="rounded-full border border-ink/20 p-2 md:hidden"
         >
@@ -369,7 +389,11 @@ function Header() {
                 key={n.href}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                className="text-base text-ink/80"
+                className={`text-base ${
+                  activeSection === n.href
+                    ? "font-medium text-amber"
+                    : "text-cream/90"
+                }`}
               >
                 {n.label}
               </a>
@@ -628,7 +652,6 @@ function Cases() {
   );
 }
 
-
 const WARREN_SOCIO = {
   image: warrenSocia.url,
   title: "Sócia da Warren por mérito",
@@ -702,7 +725,7 @@ function Reconhecimentos() {
                   Valor · {a.valor}
                 </p>
                 <blockquote className="text-sm italic leading-relaxed text-ink/80">
-                  “{a.quote}”
+                  "{a.quote}"
                 </blockquote>
               </div>
             </article>
@@ -720,7 +743,7 @@ function Projetos() {
         <SectionTitle
           eyebrow="Projetos autorais"
           title="Feitos com IA, publicados sem cerimônia."
-          description="Small bets fora do horário comercial — presente para sobrinha, ferramenta pública para o agro e um ERP nascendo."
+          description="Small bets fora do horário comercial — presente para sobrinha, ferramenta pública para o agro e um ERP para equoterapia."
         />
         <div className="grid gap-6 md:grid-cols-3">
           {PROJETOS.map((p) => {
@@ -847,31 +870,29 @@ function Palestras() {
   );
 }
 
-
-
 function PalestraCard({ p }: { p: PalestraItem }) {
   const thumb =
     "image" in p && p.image
       ? p.image
       : "videoId" in p && p.videoId
-        ? `https://img.youtube.com/vi/${p.videoId}/hqdefault.jpg`
-        : null;
+      ? `https://img.youtube.com/vi/${p.videoId}/hqdefault.jpg`
+      : null;
 
   const href =
     "href" in p && p.href
       ? p.href
       : "videoId" in p && p.videoId
-        ? `https://www.youtube.com/watch?v=${p.videoId}`
-        : null;
+      ? `https://www.youtube.com/watch?v=${p.videoId}`
+      : null;
 
   const Icon =
     p.kind === "video"
       ? PlayCircle
       : p.kind === "live"
-        ? Radio
-        : p.kind === "curso" || p.kind === "webinar"
-          ? Sparkles
-          : Mic;
+      ? Radio
+      : p.kind === "curso" || p.kind === "webinar"
+      ? Sparkles
+      : Mic;
 
   const cardBody = (
     <>
@@ -896,12 +917,12 @@ function PalestraCard({ p }: { p: PalestraItem }) {
           {p.kind === "video"
             ? "Vídeo-aula"
             : p.kind === "curso"
-              ? "Curso"
-              : p.kind === "webinar"
-                ? "Webinar"
-                : p.kind === "live"
-                  ? "Live"
-                  : "Palestra"}
+            ? "Curso"
+            : p.kind === "webinar"
+            ? "Webinar"
+            : p.kind === "live"
+            ? "Live"
+            : "Palestra"}
         </div>
         <h3 className="font-display text-xl leading-snug text-ink">{p.title}</h3>
         <p className="mt-2 text-sm text-ink/70">{p.subtitle}</p>
