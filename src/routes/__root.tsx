@@ -93,9 +93,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Jéssica Junker — Product Manager | Fintech, Agritech & IA" },
-      { name: "description", content: "My Creative Showcase is a digital portfolio for showcasing projects and achievements." },
-      { property: "og:description", content: "My Creative Showcase is a digital portfolio for showcasing projects and achievements." },
-      { name: "twitter:description", content: "My Creative Showcase is a digital portfolio for showcasing projects and achievements." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c1acb15c-8a9f-4d4d-bfa0-393c22486e5b/id-preview-c3e642b3--22e23531-ba9c-47bb-9832-bf35afeb1a23.lovable.app-1783019954274.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c1acb15c-8a9f-4d4d-bfa0-393c22486e5b/id-preview-c3e642b3--22e23531-ba9c-47bb-9832-bf35afeb1a23.lovable.app-1783019954274.png" },
     ],
@@ -121,7 +118,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
