@@ -862,7 +862,7 @@ function MaosNaMassa() {
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
           <div className="order-1 overflow-hidden rounded-2xl border border-ink/10">
             <img
-              src="/jessica-pessoal.jpg"
+              src="/Screenshot%202026-07-06%20at%2019.30.37.png"
               alt="Jéssica Junker sorrindo com vista de vinhedos ao fundo"
               className="h-80 w-full object-cover md:h-[32rem]"
               loading="lazy"
