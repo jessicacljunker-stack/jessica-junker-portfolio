@@ -188,6 +188,7 @@ type PalestraItem =
       subtitle: string;
       meta: string;
       href: string;
+      image?: string;
     }
   | {
       kind: "webinar";
@@ -233,6 +234,7 @@ const PALESTRAS: PalestraItem[] = [
     subtitle: "Aegro Conhecimento",
     meta: "Minicurso online",
     href: "https://conhecimento.aegro.com.br/minicurso-fiscal-declara-graos",
+    image: "/Screenshot%202026-07-06%20at%2013.08.01.png",
   },
   {
     kind: "video",
