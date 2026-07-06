@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
+import { track } from "@vercel/analytics";
 import {
   ArrowUpRight,
   FileText,
@@ -368,6 +369,7 @@ function Header() {
         </nav>
         <a
           href="#contato"
+          onClick={() => track("nav_falar_click", { device: "desktop" })}
           className="hidden rounded-full bg-amber px-5 py-2 text-sm font-medium text-ink transition hover:bg-amber-soft md:inline-flex"
         >
           Falar comigo
@@ -400,7 +402,10 @@ function Header() {
             ))}
             <a
               href="#contato"
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                setOpen(false);
+                track("nav_falar_click", { device: "mobile" });
+              }}
               className="rounded-full bg-amber px-5 py-2 text-center text-sm font-medium text-ink"
             >
               Falar comigo
@@ -440,12 +445,14 @@ function Hero() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#cases"
+              onClick={() => track("hero_click", { label: "Ver cases" })}
               className="inline-flex items-center gap-2 rounded-full bg-amber px-6 py-3 text-sm font-medium text-ink transition hover:bg-amber-soft"
             >
               Ver cases <ArrowUpRight className="size-4" />
             </a>
             <a
               href="#projetos"
+              onClick={() => track("hero_click", { label: "Projetos com IA" })}
               className="inline-flex items-center gap-2 rounded-full border border-ink/20 px-6 py-3 text-sm font-medium text-ink transition hover:border-amber hover:text-amber"
             >
               Projetos com IA
@@ -621,6 +628,7 @@ function Cases() {
                       href={c.href}
                       target="_blank"
                       rel="noreferrer"
+                      onClick={() => track("case_click", { title: c.title, company: c.company })}
                       className="inline-flex items-center gap-2 rounded-full bg-amber px-4 py-2 text-sm font-medium text-ink transition hover:bg-amber-soft"
                     >
                       {c.href.includes("youtube.com") ? (
@@ -774,6 +782,7 @@ function Projetos() {
                     href={p.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => track("projeto_click", { title: p.title, cta: p.cta })}
                     className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-amber hover:text-amber-soft"
                   >
                     {p.cta} <ArrowUpRight className="size-4" />
@@ -942,7 +951,13 @@ function PalestraCard({ p }: { p: PalestraItem }) {
     "group flex flex-col overflow-hidden rounded-2xl border border-ink/10 bg-ink/[3%] transition hover:border-amber/50";
 
   return href ? (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => track("palestra_click", { title: p.title, kind: p.kind })}
+      className={className}
+    >
       {cardBody}
     </a>
   ) : (
@@ -966,6 +981,7 @@ function Contabil() {
               href={d.href}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => track("contabil_click", { label: d.label, year: d.year })}
               className="group flex items-start gap-5 rounded-2xl border border-ink/10 bg-ink/[3%] p-6 transition hover:border-amber/50"
             >
               <div className="grid size-14 shrink-0 place-items-center rounded-xl bg-amber/15 text-amber">
@@ -1040,6 +1056,7 @@ function Contato() {
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <a
             href="mailto:jessicacljunker@gmail.com"
+            onClick={() => track("contato_click", { channel: "email" })}
             className="inline-flex items-center gap-2 rounded-full bg-amber px-6 py-3 text-sm font-medium text-ink transition hover:bg-amber-soft"
           >
             Enviar e-mail
@@ -1048,6 +1065,7 @@ function Contato() {
             href="https://wa.me/5551999037380"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => track("contato_click", { channel: "whatsapp" })}
             className="inline-flex items-center gap-2 rounded-full border border-ink/20 px-6 py-3 text-sm font-medium text-ink transition hover:border-amber hover:text-amber"
           >
             <MessageCircle className="size-4" /> WhatsApp
@@ -1056,6 +1074,7 @@ function Contato() {
             href="https://www.linkedin.com/in/jessicajunker/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => track("contato_click", { channel: "linkedin" })}
             className="inline-flex items-center gap-2 rounded-full border border-ink/20 px-6 py-3 text-sm font-medium text-ink transition hover:border-amber hover:text-amber"
           >
             LinkedIn <ArrowUpRight className="size-4" />
