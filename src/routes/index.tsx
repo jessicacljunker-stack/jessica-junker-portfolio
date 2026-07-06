@@ -874,9 +874,9 @@ function MaosNaMassa() {
               Além do produto.
             </h2>
             <div className="mt-6 space-y-4 text-lg text-ink/70">
-              <p>Amo viajar, sou mãe de pet e aprecio bons vinhos — mesmo sem entender muito e escolhendo sempre pela garrafa mais bonita.</p>
-              <p>Sou virginiana: amo estar com as pessoas que amo na mesma proporção que amo meus momentos sozinha.</p>
-              <p>Meu sonho é sentir que estou contribuindo positivamente no ambiente em que estou — pessoal e profissional. Quero fazer a diferença na vida das pessoas que me rodeiam.</p>
+              <p>Viajar me inspira. Sou mãe de pet, apaixonada por um bom vinho (escolhido, quase sempre, pela garrafa mais bonita) e acredito que as melhores histórias acontecem quando a gente se permite viver experiências.</p>
+              <p>Como boa virginiana, adoro estar rodeada pelas pessoas que amo, mas também valorizo muito meus momentos sozinha. É nesse equilíbrio que encontro energia.</p>
+              <p>Mais do que construir produtos, meu maior objetivo é deixar os lugares por onde passo um pouco melhores do que os encontrei. Quero gerar impacto, facilitar a vida das pessoas e contribuir de forma genuína, dentro e fora do trabalho.</p>
             </div>
           </div>
         </div>
