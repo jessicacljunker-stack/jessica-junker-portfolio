@@ -505,7 +505,7 @@ function Hero() {
               <li>Aegro</li>
             </ul>
             <div className="mt-6 border-t border-ink/10 pt-4 text-sm text-ink/60">
-              Formação em Ciências Contábeis · CRC ativa
+              Formação em Ciências Contábeis pela UFSM · CRC ativa
             </div>
           </div>
         </aside>
