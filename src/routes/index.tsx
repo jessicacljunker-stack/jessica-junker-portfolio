@@ -1071,7 +1071,7 @@ function Contato() {
             <MessageCircle className="size-4" /> WhatsApp
           </a>
           <a
-            href="https://www.linkedin.com/in/jessicajunker/"
+            href="https://www.linkedin.com/in/jessicacljunker/"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => track("contato_click", { channel: "linkedin" })}
