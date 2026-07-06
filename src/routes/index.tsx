@@ -860,6 +860,28 @@ function MaosNaMassa() {
     <section id="pessoal" className="border-t border-ink/10 py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6 space-y-20 md:space-y-28">
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
+          <div className="order-1 overflow-hidden rounded-2xl border border-ink/10">
+            <img
+              src="/jessica-pessoal.jpg"
+              alt="Jéssica Junker sorrindo com vista de vinhedos ao fundo"
+              className="h-80 w-full object-cover md:h-[32rem]"
+              loading="lazy"
+            />
+          </div>
+          <div className="order-2">
+            <p className="mb-4 text-xs uppercase tracking-[0.25em] text-amber">Essa sou eu</p>
+            <h2 className="font-display text-4xl leading-tight tracking-tight text-ink md:text-5xl">
+              Além do produto.
+            </h2>
+            <div className="mt-6 space-y-4 text-lg text-ink/70">
+              <p>Amo viajar, sou mãe de pet e aprecio bons vinhos — mesmo sem entender muito e escolhendo sempre pela garrafa mais bonita.</p>
+              <p>Sou virginiana: amo estar com as pessoas que amo na mesma proporção que amo meus momentos sozinha.</p>
+              <p>Meu sonho é sentir que estou contribuindo positivamente no ambiente em que estou — pessoal e profissional. Quero fazer a diferença na vida das pessoas que me rodeiam.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
           <div className="order-2 md:order-1">
             <p className="mb-4 text-xs uppercase tracking-[0.25em] text-amber">Fora do horário de produto</p>
             <h2 className="font-display text-4xl leading-tight tracking-tight text-ink md:text-5xl">
