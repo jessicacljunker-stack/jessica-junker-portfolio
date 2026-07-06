@@ -72,12 +72,12 @@ const CASES: Case[] = [
     tag: "Agritech · Emissão fiscal",
     title: "Novo emissor de notas do Aegro",
     company: "Aegro",
-    body: "PM responsável pela construção do zero do novo emissor de notas fiscais, unificando NF-e, NFC-e e NFS-e em uma experiência voltada para produtores rurais e contadores parceiros.",
-    stack: ["NF-e", "NFC-e", "NFS-e", "Reconstrução de produto"],
+    body: "Construí do zero o novo emissor de NF-e da Aegro com foco em uma experiência automática e facilitada: criei manualmente o banco de dados de alíquotas tributárias que sustenta a biblioteca fiscal do produto, permitindo que produtores rurais emitam notas sem qualquer conhecimento fiscal prévio.",
+    stack: ["NF-e", "Biblioteca de alíquotas", "Emissão automática", "Reconstrução de produto"],
     href: "https://www.youtube.com/watch?v=h0LSin68kJI",
     metrics: [
-      { value: "3 em 1", label: "NF-e, NFC-e e NFS-e unificadas" },
       { value: "0 → 1", label: "produto reconstruído do zero" },
+      { value: "100%", label: "regras fiscais mapeadas manualmente" },
     ],
   },
   {
