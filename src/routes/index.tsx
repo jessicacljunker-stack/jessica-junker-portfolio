@@ -713,7 +713,7 @@ const WARREN_SOCIO = {
   image: warrenSocia.url,
   title: "Sócia da Warren por mérito",
   year: "2021",
-  body: "Tornei-me sócia da Warren por mérito em 2021, reconhecimento pela contribuição na construção de produtos, compliance fiscal e operações que escalawam o time de contabilidade."
+  body: "Tornei-me sócia da Warren por mérito em 2021, reconhecimento pela contribuição na construção de produtos, compliance fiscal e operações que escalavam o time de contabilidade."
 };
 
 const AEGER_VALOR = [
