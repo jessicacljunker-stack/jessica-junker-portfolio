@@ -228,6 +228,13 @@ const PALESTRAS: PalestraItem[] = [
     image: palestraReformaRS.url,
   },
   {
+    kind: "curso",
+    title: "Minicurso Fiscal — Declara Grãos",
+    subtitle: "Aegro Conhecimento",
+    meta: "Minicurso online",
+    href: "https://conhecimento.aegro.com.br/minicurso-fiscal-declara-graos",
+  },
+  {
     kind: "video",
     title: "Aula: Do papel ao digital — Emissão de NF-e",
     subtitle: "YouTube",
