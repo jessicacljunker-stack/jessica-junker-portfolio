@@ -45,6 +45,7 @@ const NAV = [
 ];
 
 type Metric = { value: string; label: string };
+type AppLink = { label: string; href: string };
 type Case = {
   tag: string;
   title: string;
@@ -52,6 +53,7 @@ type Case = {
   body: string;
   stack: string[];
   href?: string;
+  appLinks?: AppLink[];
   metrics?: Metric[];
 };
 
@@ -69,6 +71,21 @@ const CASES: Case[] = [
     ],
   },
   {
+    tag: "Agritech · App Mobile",
+    title: "Aegro Negócios",
+    company: "Aegro",
+    body: "Conduzi a construção do Aegro Negócios — app que nasceu focado na emissão de NF-e e evoluiu para concentrar diversas atividades de escritório da fazenda. Fui a PM responsável pelo desenvolvimento e pelo processo de aprovação na App Store da Apple.",
+    stack: ["iOS", "App Store", "NF-e", "Mobile"],
+    appLinks: [
+      { label: "App Store", href: "https://apps.apple.com/br/app/aegro-neg%C3%B3cios/id1641960190" },
+      { label: "Google Play", href: "https://play.google.com/store/apps/details?id=br.com.aegro.mobile" },
+    ],
+    metrics: [
+      { value: "0 → 1", label: "app construído do zero" },
+      { value: "App Store", label: "aprovação conduzida por mim" },
+    ],
+  },
+  {
     tag: "Agritech · Emissão fiscal",
     title: "Novo emissor de notas do Aegro",
     company: "Aegro",
@@ -76,8 +93,8 @@ const CASES: Case[] = [
     stack: ["NF-e", "Biblioteca de alíquotas", "Emissão automática", "Reconstrução de produto"],
     href: "https://www.youtube.com/watch?v=h0LSin68kJI",
     metrics: [
-      { value: "0 → 1", label: "produto reconstruído do zero" },
       { value: "100%", label: "regras fiscais mapeadas manualmente" },
+      { value: "0 → 1", label: "produto reconstruído do zero" },
     ],
   },
   {
@@ -229,14 +246,6 @@ const PALESTRAS: PalestraItem[] = [
     image: palestraReformaRS.url,
   },
   {
-    kind: "curso",
-    title: "Minicurso Fiscal — Declara Grãos",
-    subtitle: "Aegro Conhecimento",
-    meta: "Minicurso online",
-    href: "https://conhecimento.aegro.com.br/minicurso-fiscal-declara-graos",
-    image: "/Screenshot%202026-07-06%20at%2013.08.01.png",
-  },
-  {
     kind: "video",
     title: "Aula: Do papel ao digital — Emissão de NF-e",
     subtitle: "YouTube",
@@ -273,6 +282,14 @@ const PALESTRAS: PalestraItem[] = [
     subtitle: "YouTube",
     meta: "Webinar · 2026",
     videoId: "qWzOmuUyDqw",
+  },
+  {
+    kind: "curso",
+    title: "Minicurso Fiscal — Declara Grãos",
+    subtitle: "Aegro Conhecimento",
+    meta: "Minicurso online",
+    href: "https://conhecimento.aegro.com.br/minicurso-fiscal-declara-graos",
+    image: "/Screenshot%202026-07-06%20at%2013.08.01.png",
   },
 ];
 
@@ -651,6 +668,18 @@ function Cases() {
                       )}
                     </a>
                   ) : null}
+                  {c.appLinks?.map((al) => (
+                    <a
+                      key={al.label}
+                      href={al.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={() => track("case_click", { title: c.title, company: c.company, store: al.label })}
+                      className="inline-flex items-center gap-2 rounded-full bg-amber px-4 py-2 text-sm font-medium text-ink transition hover:bg-amber-soft"
+                    >
+                      <ArrowUpRight className="size-4" /> {al.label}
+                    </a>
+                  ))}
                   {c.stack.map((s) => (
                     <span
                       key={s}
