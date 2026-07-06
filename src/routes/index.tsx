@@ -619,8 +619,8 @@ function Cases() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionTitle
           eyebrow="Cases de produto"
-          title="Recortes de como eu trabalho."
-          description="Contexto denso, decisão de escopo dura e o impacto que dá para medir."
+          title="Cases reais. Decisões reais."
+          description="Contexto, trade-offs e impacto de produtos que trabalhei de perto."
         />
         <div className="space-y-6">
           {CASES.map((c, i) => (
