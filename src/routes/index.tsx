@@ -59,18 +59,6 @@ type Case = {
 
 const CASES: Case[] = [
   {
-    tag: "Agritech · Marketplace / Pricing",
-    title: "Compare Preços no Aegro Negócios",
-    company: "Aegro",
-    body: "Conduzi a construção do Compare Preços do zero, mobile-first, usando dados regionais proprietários de preços de insumos como benchmark para o produtor negociar melhor com fornecedores.",
-    stack: ["Pricing", "Marketplace", "Mobile", "Agritech"],
-    href: "https://compare.aegro.com.br/",
-    metrics: [
-      { value: "30%", label: "adoção ativa na base de clientes" },
-      { value: "0 → 1", label: "construção do zero, mobile-first" },
-    ],
-  },
-  {
     tag: "Agritech · App Mobile",
     title: "Aegro Negócios",
     company: "Aegro",
@@ -83,6 +71,18 @@ const CASES: Case[] = [
     metrics: [
       { value: "0 → 1", label: "app construído do zero" },
       { value: "App Store", label: "aprovação conduzida por mim" },
+    ],
+  },
+  {
+    tag: "Agritech · Marketplace / Pricing",
+    title: "Compare Preços no Aegro Negócios",
+    company: "Aegro",
+    body: "Conduzi a construção do Compare Preços do zero, mobile-first, usando dados regionais proprietários de preços de insumos como benchmark para o produtor negociar melhor com fornecedores.",
+    stack: ["Pricing", "Marketplace", "Mobile", "Agritech"],
+    href: "https://compare.aegro.com.br/",
+    metrics: [
+      { value: "30%", label: "adoção ativa na base de clientes" },
+      { value: "0 → 1", label: "construção do zero, mobile-first" },
     ],
   },
   {
