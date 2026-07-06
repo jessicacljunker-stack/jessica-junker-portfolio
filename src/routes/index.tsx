@@ -144,6 +144,17 @@ const CASES: Case[] = [
       { value: "R$20bi", label: "em ativos sob custódia" },
     ],
   },
+  {
+    tag: "Fintech · Core Banking",
+    title: "Conta Corrente de Clientes",
+    company: "Warren",
+    body: "Construí o produto de conta corrente unificando todas as movimentações financeiras do cliente — entradas, saídas e posições em fundos próprios da Warren, fundos de terceiros e ações — em uma única visão coerente e auditável.",
+    stack: ["Core Banking", "Fundos", "Ações", "Conciliação financeira"],
+    metrics: [
+      { value: "1 visão", label: "unificando fundos próprios, terceiros e ações" },
+      { value: "0 → 1", label: "produto construído do zero" },
+    ],
+  },
 ];
 type Projeto = {
   tag: string;
